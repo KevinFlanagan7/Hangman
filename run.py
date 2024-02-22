@@ -2,9 +2,10 @@ from src.instructions import get_instructions
 from src.validation import validate_choice
 from src.clear import clear_screen
 from src.game import start_game
+from src.ascii_art import welcome
 
 def display_menu():
-    print("Welcome to Hangman!\n")
+    welcome()
     print("1. Start Game")
     print("2. Instructions")
     print("3. Quit\n")
