@@ -2,6 +2,7 @@ import random
 from src.ascii_art import hangman_stages
 from src.words import words
 from src.clear import clear_screen
+from src.validation import validate_guess
 
 def start_game():
     clear_screen()
@@ -28,6 +29,9 @@ def start_game():
         # Add the guess to the list of guessed letters
         guessed_letters.append(guess)
 
+        if not validate_guess(guess):
+            continue
+
         # Check if the guess is in the secret word
         if guess in secret_word:
             clear_screen()
@@ -42,6 +46,7 @@ def start_game():
             if display_word.replace(" ","") == secret_word:
                 print("Congratulations! You've guessed the word:", secret_word)
                 break
+
         else:
             clear_screen()
             print("Incorrect guess!")
