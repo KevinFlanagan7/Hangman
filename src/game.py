@@ -20,17 +20,24 @@ def start_game():
     max_attempts = len(hangman_stages) - 1  
 
     print(hangman_stages[incorrect_guesses])
+    
 
     while True:
         print("Word to guess:", display_word)
         print("\nGuessed letters:", ", ".join(guessed_letters))
-        guess = input("Enter a letter: ").lower()
+
+        while True:
+            guess = input("Enter a letter: ").lower()
+
+            if validate_guess(guess, guessed_letters):
+                break
+            
+            
 
         # Add the guess to the list of guessed letters
         guessed_letters.append(guess)
 
-        if not validate_guess(guess):
-            continue
+        
 
         # Check if the guess is in the secret word
         if guess in secret_word:
