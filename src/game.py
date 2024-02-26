@@ -1,15 +1,16 @@
-import random
 from src.ascii_art import hangman_stages
-from src.words import words
 from src.clear import clear_screen
 from src.validation import validate_guess
+from src.words_api import get_words_from_api
 
 def start_game():
     clear_screen()
     print("Welcome to Hangman!")
     print("Try to guess the word by guessing one letter at a time.")
 
-    secret_word = random.choice(words)
+    words = get_words_from_api()
+    secret_word = words
+    
 
     # display secret word as underscores with spaces
     display_word = " ".join(["_" for char in secret_word])
