@@ -1,7 +1,7 @@
 def validate_choice():
     while True:
         try:
-            choice = int(input("Enter your choice: "))
+            choice = int(input("Enter your choice of 1, 2 or 3 and press enter: "))
             if 1 <= choice <= 3:
                 return choice
             else:
@@ -10,17 +10,30 @@ def validate_choice():
             print(f"Invalid input: {e}")
 
 
+def validate_enter():
+    """
+    Validates that the user presses Enter to go back to the main menu.
+    """
+    while True:
+        try:
+            user_input = input("Press Enter to go back to the main menu...")
+            if user_input == "":
+                break  
+            else:
+                raise ValueError("Invalid input. Please press Enter to go back to the main menu...")
+        except ValueError as e:
+            print(e)
+            
+
 def validate_guess(guess, guessed_letters):
     try:
-        # Check if the guess is a single character
+        
         if len(guess) != 1:
             raise ValueError("Please enter a single character.")
         
-        # Check if the guess is an alphabetical character
         if not guess.isalpha():
             raise ValueError("Please enter an alphabetical character.")
-        
-        # Check if the guess has already been guessed
+               
         if guess in guessed_letters:
             raise ValueError("You've already guessed this letter. Try another one.")
         

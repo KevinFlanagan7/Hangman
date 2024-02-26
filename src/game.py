@@ -13,8 +13,7 @@ def start_game():
 
     # display secret word as underscores with spaces
     display_word = " ".join(["_" for char in secret_word])
-
-    
+   
     guessed_letters = []
     incorrect_guesses = 0
     max_attempts = len(hangman_stages) - 1  
@@ -27,17 +26,13 @@ def start_game():
         print("\nGuessed letters:", ", ".join(guessed_letters))
 
         while True:
-            guess = input("Enter a letter: ").lower()
+            guess = input("Enter a letter and press enter: ").lower()
 
             if validate_guess(guess, guessed_letters):
-                break
-            
-            
+                break        
 
         # Add the guess to the list of guessed letters
         guessed_letters.append(guess)
-
-        
 
         # Check if the guess is in the secret word
         if guess in secret_word:
@@ -65,7 +60,7 @@ def start_game():
 
             # Check if the player has used all their attempts and displays secret word
             if incorrect_guesses == max_attempts:
-                print("Sorry, you've run out of attempts!")
+                print("Hard Luck!, game over, you've run out of attempts!")
                 print("The word was:", secret_word)
                 break
 
