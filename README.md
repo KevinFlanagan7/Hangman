@@ -6,8 +6,6 @@
 
 Welcome to the Hangman. The goal of this project is to create a Python based terminal game of hangman. The words will be randomly selected from an API and if API not available will be selected from a list of words stored locally in program. All user inputs to be validated and feedback to the player if any invalid inputs are made.  
 
-![Responsive Displays](/documentation/am-i-responsive.png)
-
 ## Table of Contents
 
 - [Hangman](#hangman)
@@ -58,21 +56,7 @@ Welcome to the Hangman. The goal of this project is to create a Python based ter
 \
 &nbsp;
 
-## Design
-
-
-
-
-
-\
-&nbsp;
-[Back to Top](#table-of-contents)
-\
-&nbsp;
-
 ## Flow Chart
-
-*Flow Chart*
 
 ![Flow chart](/documentation/hangman-flow-chart.png)
 
