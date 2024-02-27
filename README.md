@@ -178,7 +178,37 @@ Welcome to the Hangman . The goal of this project is to provide
 
 ## Deployment
 
+The site was deployed using Heroku following the steps below:
 
+- Create a list of requirements using the following command in the terminal (pip3 freeze > requirements.txt).
+
+- Heroku searches for this exact file name as it builds the project. This file contains the list of the packages installed during project development which are called dependencies. We need Heroku to install these dependecies as well in order for the project to run. 
+
+- Activate your Heroku Student Pack account at the following link: [Heroku for Students]( https://www.heroku.com/github-students).
+
+- From Heroku Dashboard click on **Create New App**, enter name of app, choose your region and then click **Create App**.
+
+- Click on the **Settings** tab of the newly created app.
+
+- Go to **Config Vars** section and in the field for KEY enter **PORT**, in the VALUE field enter *8000* and then click **ADD**.
+
+- If your project uses a **creds.json** file you will need to set a config var by adding **CREDS** to KEY field and copying contents of creds.json file into VALUE field.
+
+- Go to Buildpacks section and click on **Add buildpack**.
+
+- Select **python** and click on **Save changes**.
+
+- Click on **Add buildpack** again, select **nodejs** and click on **Save changes**.
+
+- Make sure buildpacks are in order with python on top and nodejs underneath.
+
+- Click on **Deploy** tab at top of screen.
+
+- In **Deployment method** section selct **GitHub** and confirm by clicking **Connect to GitHub**.
+
+- Serach for your GitHub repository name, once found click **Connect**.
+
+- Scroll down on page and select either **Enable Automatic Deploys** which will rebuild your app every time you push a new change to GitHub or **Deploy Branch** which is a manual deployment so has to be selected after each change pushed to GitHub.
 
 ### Fork
 

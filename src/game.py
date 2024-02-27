@@ -38,12 +38,11 @@ def start_game():
         # Check if the guess is in the secret word
         if guess in secret_word:
             clear_screen()
+            print(hangman_stages[incorrect_guesses])
             print("Correct guess!")
             print("Attempts remaining:", max_attempts - incorrect_guesses)
             # Update the display word to reveal the guessed letters
             display_word = " ".join([char if char in guessed_letters else "_" for char in secret_word])
-
-            print(hangman_stages[incorrect_guesses])
 
         # Check if the player has guessed all the letters
             if display_word.replace(" ","") == secret_word:
@@ -52,12 +51,11 @@ def start_game():
 
         else:
             clear_screen()
+            print(hangman_stages[incorrect_guesses])
             print("Incorrect guess!")
             incorrect_guesses += 1
             print("Attempts remaining:", max_attempts - incorrect_guesses)
 
-            # Prints the current hangman stage
-            print(hangman_stages[incorrect_guesses])
 
             # Check if the player has used all their attempts and displays secret word
             if incorrect_guesses == max_attempts:
