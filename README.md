@@ -64,6 +64,8 @@ Welcome to the Hangman . The goal of this project is to provide
 
 
 
+
+
 \
 &nbsp;
 [Back to Top](#table-of-contents)
@@ -71,6 +73,10 @@ Welcome to the Hangman . The goal of this project is to provide
 &nbsp;
 
 ## Flow Chart
+
+*Flow Chart*
+
+![Flow chart](/documentation/hangman-flow-chart.png)
 
 
 \
