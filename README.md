@@ -1,10 +1,10 @@
-![Logo](/documentation/masters-logo.png)
+![Logo](/documentation/welcome-logo.png)
 
-# Hangmam
+# Hangman
 
 ## Goal for this Project
 
-Welcome to the Hangman . The goal of this project is to provide   
+Welcome to the Hangman. The goal of this project is to create a Python based terminal game of hangman. The words will be randomly selected from an API and if API not available will be selected from a list of words stored locally in program. All user inputs to be validated and feedback to the player if any invalid inputs are made.  
 
 ![Responsive Displays](/documentation/am-i-responsive.png)
 
@@ -38,21 +38,19 @@ Welcome to the Hangman . The goal of this project is to provide
 
 ## User Stories
 
-* As a user, 
+* As a user, I want instructions on how to play the game. 
 
-* As a user, 
+* As a user, I want to know if my inputs are valid and get feedback if not.
 
-* As a user, 
+* As a user, I want to know if my input is correct or not.
 
-* As a user, 
+* As a user, I want to know what inputs I have already made.
 
-* As a user,  
+* As a user, I what do know my current attempt status is during game.
 
-* As a user,  
+* As a user, I want to know correct word if I run out of attempts. 
 
-* As a user, 
-
-* As a user,  
+* As a user, I want the option to play the game again when finished. 
 
 \
 &nbsp;
