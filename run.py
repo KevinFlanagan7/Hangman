@@ -1,8 +1,10 @@
 from src.instructions import get_instructions
 from src.validation import validate_choice, validate_enter
-from src.clear import clear_screen
+from src.utils import clear_screen
 from src.game import start_game
 from src.ascii_art import welcome
+from src.utils import select_level
+
 
 def display_menu():
     welcome()
@@ -18,7 +20,8 @@ def main():
 
         if choice == 1:
             clear_screen()
-            start_game()
+            level = select_level()
+            start_game(level)
             validate_enter()
         elif choice == 2:
             clear_screen()

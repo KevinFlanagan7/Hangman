@@ -1,15 +1,14 @@
 from src.ascii_art import hangman_stages
-from src.clear import clear_screen
+from src.utils import clear_screen
 from src.validation import validate_guess
-from src.words_api import get_words_from_api
+from src.api import get_words_from_api
 
-def start_game():
+def start_game(level):
     clear_screen()
     print("Welcome to Hangman!")
     print("Try to guess the word by guessing one letter at a time.")
 
-    words = get_words_from_api()
-    secret_word = words
+    secret_word = get_words_from_api(level)
     
     # display secret word as underscores with spaces
     display_word = " ".join(["_" for char in secret_word])
@@ -58,9 +57,6 @@ def start_game():
 
             # Check if the player has used all their attempts and displays secret word
             if incorrect_guesses == max_attempts:
-                print("Hard Luck!, game over, you've run out of attempts!")
+                print("Game over, you've run out of attempts!")
                 print("The word was:", secret_word)
                 break
-
-
-  
