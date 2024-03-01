@@ -54,7 +54,12 @@ def start_game(level):
             incorrect_guesses += 1
             print("Attempts remaining:", max_attempts - incorrect_guesses)
 
-            print(hangman_stages[incorrect_guesses])
+            #print(hangman_stages[incorrect_guesses])
+
+            if incorrect_guesses < max_attempts:
+                print(hangman_stages[incorrect_guesses])
+            else:
+                print(Fore.RED + hangman_stages[incorrect_guesses] + Style.RESET_ALL)
 
             # Check if the player has used all their attempts and displays secret word
             if incorrect_guesses == max_attempts:
