@@ -6,9 +6,9 @@ def clear_screen():
 
 
 def select_level():
-    print("Select Game Level:")
+    print("Select Game Level:\n")
     print("1. Easy")
     print("2. Medium")
-    print("3. Hard")
+    print("3. Hard\n")
     return validate_choice()
 

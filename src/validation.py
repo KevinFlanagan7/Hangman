@@ -1,3 +1,6 @@
+from colorama import Fore, Style
+
+
 def validate_choice():
     while True:
         try:
@@ -5,9 +8,9 @@ def validate_choice():
             if 1 <= choice <= 3:
                 return choice
             else:
-                print("Invalid input: Please enter a number between 1 and 3.")
+                print(Fore.RED + "Invalid input: Please enter a number between 1 and 3." + Style.RESET_ALL)
         except ValueError:
-            print("Invalid input: Please enter a number between 1 and 3.")
+            print(Fore.RED + "Invalid input: Please enter a number between 1 and 3." + Style.RESET_ALL)
 
 
 
@@ -22,7 +25,7 @@ def validate_enter():
             if user_input == "":
                 break  
             else:
-                raise ValueError("Invalid input. Please press Enter to go back to the main menu...")
+                raise ValueError(Fore.RED + "Invalid input. Please press Enter to go back to the main menu..." + Style.RESET_ALL)
         except ValueError as e:
             print(e)
             
@@ -31,13 +34,13 @@ def validate_guess(guess, guessed_letters):
     try:
         
         if len(guess) != 1:
-            raise ValueError("Invalid input: Please enter a single character.")
+            raise ValueError(Fore.RED + "Invalid input: Please enter a single character." + Style.RESET_ALL)
         
         if not guess.isalpha():
-            raise ValueError("Invalid input: Please enter an alphabetical character.")
+            raise ValueError(Fore.RED + "Invalid input: Please enter an alphabetical character." + Style.RESET_ALL)
                
         if guess in guessed_letters:
-            raise ValueError("Invalid input: You've already guessed this letter. Try another one.")
+            raise ValueError(Fore.RED + "Invalid input: You've already guessed this letter. Try another one." + Style.RESET_ALL)
         
         return True
     except ValueError as e:

@@ -2,6 +2,7 @@ from src.ascii_art import hangman_stages
 from src.utils import clear_screen
 from src.validation import validate_guess
 from src.api import get_words_from_api
+from colorama import Fore, Style
 
 def start_game(level):
     clear_screen()
@@ -35,7 +36,7 @@ def start_game(level):
         # Check if the guess is in the secret word
         if guess in secret_word:
             clear_screen()
-            print("Correct guess!")
+            print(Fore.GREEN + "Correct guess!" + Style.RESET_ALL)
             print("Attempts remaining:", max_attempts - incorrect_guesses)
             # Update the display word to reveal the guessed letters
             display_word = " ".join([char if char in guessed_letters else "_" for char in secret_word])
@@ -49,7 +50,7 @@ def start_game(level):
 
         else:
             clear_screen()
-            print("Incorrect guess!")
+            print(Fore.RED + "Incorrect guess!" + Style.RESET_ALL)
             incorrect_guesses += 1
             print("Attempts remaining:", max_attempts - incorrect_guesses)
 

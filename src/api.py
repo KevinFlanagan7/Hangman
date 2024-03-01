@@ -1,6 +1,6 @@
 import requests
 import random
-from src.words import words as backup_words
+from src.words import WORDS as backup_words
 
 def get_words_from_api(level):
     """
@@ -8,7 +8,6 @@ def get_words_from_api(level):
     If failed, uses backup words from words.py
     """
     try:
-        # Adjust the number and length of words based on the selected level
         if level == 1:  # Easy level
             response = requests.get("https://random-word-api.herokuapp.com/word?lang=en&number=10&length=4")
         elif level == 2:  # Medium level
