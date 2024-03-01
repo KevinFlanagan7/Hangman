@@ -7,7 +7,7 @@ def clear_screen():
 
 
 def select_level():
-    print(Fore.CYAN + "Select Game Level:\n"+ Style.RESET_ALL)
+    print(Fore.BLUE + "Select Game Level:\n"+ Style.RESET_ALL)
     print("1. Easy")
     print("2. Medium")
     print("3. Hard\n")

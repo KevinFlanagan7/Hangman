@@ -1,6 +1,7 @@
 import requests
 import random
 from src.words import WORDS as backup_words
+from colorama import Fore, Style
 
 def get_words_from_api(level):
     """
@@ -20,5 +21,5 @@ def get_words_from_api(level):
             return random.choice(words)
         
     except Exception:
-        print("Failed to retrive words from api so using backup words.")
+        print(Fore.RED + "Failed to retrive words from api so using backup words."+ Style.RESET_ALL)
     return random.choice(backup_words)
