@@ -10,6 +10,7 @@ def start_game(level):
     print("Try to guess the word by guessing one letter at a time.")
 
     secret_word = get_words_from_api(level)
+    #print(secret_word)
     
     # display secret word as underscores with spaces
     display_word = " ".join(["_" for char in secret_word])
@@ -45,7 +46,7 @@ def start_game(level):
 
         # Check if the player has guessed all the letters
             if display_word.replace(" ","") == secret_word:
-                print("Congratulations! You've guessed the word:", secret_word)
+                print(Fore.YELLOW + "Congratulations! You've guessed the word:", secret_word + Style.RESET_ALL)
                 break
 
         else:
@@ -58,6 +59,6 @@ def start_game(level):
 
             # Check if the player has used all their attempts and displays secret word
             if incorrect_guesses == max_attempts:
-                print("Game over, you've run out of attempts!")
+                print(Fore.RED + "Game over, you've run out of attempts!" + Style.RESET_ALL)
                 print("The word was:", secret_word)
                 break

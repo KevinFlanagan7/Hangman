@@ -1,8 +1,9 @@
 import pyfiglet
+from colorama import Fore, Style
 
 def welcome():
     message = pyfiglet.figlet_format("Welcome\nTo\nHangman")
-    print(message)    
+    print(Fore.YELLOW + message + Style.RESET_ALL)    
 
 hangman_stages = [
     """
