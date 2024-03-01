@@ -6,7 +6,7 @@ from colorama import Fore, Style
 
 def start_game(level):
     clear_screen()
-    print("Welcome to Hangman!")
+    print(Fore.YELLOW + "Welcome to Hangman!" + Style.RESET_ALL)
     print("Try to guess the word by guessing one letter at a time.")
 
     secret_word = get_words_from_api(level)
