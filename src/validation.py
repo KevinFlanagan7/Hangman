@@ -3,7 +3,7 @@ from colorama import Fore, Style
 def validate_choice():
     while True:
         try:
-            choice = int(input(Fore.BLUE + "Enter your choice of 1, 2 or 3 and press enter: "+ Style.RESET_ALL))
+            choice = int(input(Fore.YELLOW + "Enter your choice of 1, 2 or 3 and press enter: "+ Style.RESET_ALL))
             if 1 <= choice <= 3:
                 return choice
             else:
@@ -17,7 +17,7 @@ def validate_enter():
     """
     while True:
         try:
-            user_input = input(Fore.BLUE + "Press Enter to go back to the main menu..." + Style.RESET_ALL)
+            user_input = input(Fore.YELLOW + "Press Enter to go back to the main menu..." + Style.RESET_ALL)
             if user_input == "":
                 break  
             else:
