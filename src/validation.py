@@ -3,7 +3,7 @@ from colorama import Fore, Style
 def validate_choice():
     while True:
         try:
-            choice = int(input(Fore.YELLOW + "Enter your choice of 1, 2 or 3 and press enter: "+ Style.RESET_ALL))
+            choice = int(input(Fore.YELLOW + "Enter your choice of 1, 2 or 3 and press enter:\n"+ Style.RESET_ALL))
             if 1 <= choice <= 3:
                 return choice
             else:
