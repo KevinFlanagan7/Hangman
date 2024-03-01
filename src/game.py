@@ -22,7 +22,7 @@ def start_game(level):
     
     while True:
         print("Word to guess:", display_word)
-        print("\nGuessed letters:", ", ".join(guessed_letters))
+        print(Fore.YELLOW + "\nGuessed letters:", ", ".join(guessed_letters) + Style.RESET_ALL)
 
         while True:
             guess = input("Enter a letter and press enter: ").lower()
