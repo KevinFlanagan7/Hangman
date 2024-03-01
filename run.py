@@ -5,7 +5,6 @@ from src.game import start_game
 from src.ascii_art import welcome
 from src.utils import select_level
 
-
 def display_menu():
     welcome()
     print("1. Start Game")
@@ -32,5 +31,4 @@ def main():
             print("Quitting game...")
             print("Press Run Program above to re-start game")
             break
-
 main()

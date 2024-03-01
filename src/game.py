@@ -28,7 +28,6 @@ def start_game(level):
             if validate_guess(guess, guessed_letters):
                 break        
 
-        # Add the guess to the list of guessed letters
         guessed_letters.append(guess)
 
         # Check if the guess is in the secret word
@@ -41,7 +40,7 @@ def start_game(level):
 
             print(hangman_stages[incorrect_guesses])
 
-        # Check if the player has guessed all the letters
+        # Check if the player has guessed all the letters correctly
             if display_word.replace(" ","") == secret_word:
                 print(Fore.YELLOW + "Congratulations! You've guessed the word:", secret_word + Style.RESET_ALL)
                 break
@@ -51,8 +50,6 @@ def start_game(level):
             print(Fore.RED + "Incorrect guess!" + Style.RESET_ALL)
             incorrect_guesses += 1
             print("Attempts remaining:", max_attempts - incorrect_guesses)
-
-            #print(hangman_stages[incorrect_guesses])
 
             if incorrect_guesses < max_attempts:
                 print(hangman_stages[incorrect_guesses])
