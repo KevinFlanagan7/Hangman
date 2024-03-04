@@ -7,8 +7,8 @@ def clear_screen():
 
 def select_level():
     print(Fore.YELLOW + "Select Game Level:\n"+ Style.RESET_ALL)
-    print("1. Easy")
-    print("2. Medium")
-    print("3. Hard\n")
+    print("1. Easy (4 letter word)")
+    print("2. Medium (6 letter word)")
+    print("3. Hard (8 letter word)\n")
     return validate_choice()
 

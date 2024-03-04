@@ -58,7 +58,15 @@ Welcome to the Hangman. The goal of this project is to create a Python based ter
 
 ## Flow Chart
 
+I used [Lucid charts](https://www.lucidchart.com/pages/) to design the flow charts below.
+
+*Initial design*
+
 ![Flow chart](/documentation/hangman-flow-chart.png)
+
+*Updated design with game Level options*
+
+![Flow chart](/documentation/hangman-flow-chart_2.png)
 
 
 \
