@@ -14,6 +14,7 @@ Welcome to the Hangman. The goal of this project is to create a Python based ter
 - [UX](#ux)
   - [User Stories](#user-stories)
   - [Design](#design)
+    - [Colours](#colours)
 - [Flow Chart](#flow-chart)
 - [Features](#features)
     - [Existing Features](#existing-features)
@@ -60,13 +61,30 @@ I used the code institite's [Python Essentials template](https://github.com/Code
 
 I installed and used the [Colorama](https://pypi.org/project/colorama/) library to add colour to my project, below are the different colours used:
 
-- I mostly used Yellow throughout my project for the welcome message and for the prompts for user inputs.
+- I mostly used Yellow throughout my project for the welcome message, prompts for user inputs and Congratulations message if word was guessed correctly.
 
     <details><summary>Yellow Colour</summary>
 
     ![Yellow](/documentation/welcome-yellow.png)
     ![Start](/documentation/start-game-yellow.png)
     ![Game](/documentation/game-yellow.png)
+
+
+- I used green as feedback to the player that their guessed letter was correct.
+
+    <details><summary>Green for Correct Guess</summary>
+
+    ![Correct](/documentation/correct-green.png)
+
+- I used red as feedback to the player that their guess was incorrect, that the game was over and if they made an invalid input.
+
+    <details><summary>Red for Incorrect Guess</summary>
+
+    ![Red Incorrect](/documentation/incorrect-red.png)
+    ![Invalid](/documentation/invalid-red.png)
+    ![Game Over](/documentation/game-over-red.png)
+
+
 
 \
 &nbsp;
