@@ -38,6 +38,8 @@ Welcome to the Hangman. The goal of this project is to create a Python based ter
 
 * As a user, I want instructions on how to play the game. 
 
+* As a user, I want to have the option of selecting diffent levels of difficulty.
+
 * As a user, I want to know if my inputs are valid and get feedback if not.
 
 * As a user, I want to know if my input is correct or not.
@@ -49,6 +51,22 @@ Welcome to the Hangman. The goal of this project is to create a Python based ter
 * As a user, I want to know correct word if I run out of attempts. 
 
 * As a user, I want the option to play the game again when finished. 
+
+## Design
+
+I used the code institite's [Python Essentials template](https://github.com/Code-Institute-Org/python-essentials-template) for my project which included the HTML and JavaScript code. 
+
+### Colours
+
+I installed and used the [Colorama](https://pypi.org/project/colorama/) library to add colour to my project, below are the different colours used:
+
+- I mostly used Yellow throughout my project for the welcome message and for the prompts for user inputs.
+
+    <details><summary>Yellow Colour</summary>
+
+    ![Yellow](/documentation/welcome-yellow.png)
+    ![Start](/documentation/start-game-yellow.png)
+    ![Game](/documentation/game-yellow.png)
 
 \
 &nbsp;
@@ -101,7 +119,7 @@ I used [Lucid charts](https://www.lucidchart.com/pages/) to design the flow char
 
 ## Features to be Implemented
 
-- In the future I would like to implement 
+- In the future I would like to implement google sheets as a database to transfer scores and username of player. The score would be calculated based on the amount of attempts used to guess word correctly. Then display that data as a leaderboard for each of the levels. 
 
 \
 &nbsp;
@@ -115,7 +133,8 @@ I used [Lucid charts](https://www.lucidchart.com/pages/) to design the flow char
 
 * [HTML](https://en.wikipedia.org/wiki/HTML "HTML")
 * [CSS](https://en.wikipedia.org/wiki/CSS "CSS")
-* [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+* [JavaScript](https://en.wikipedia.org/wiki/JavaScript "JS")
+* [Python](https://en.wikipedia.org/wiki/Python_(programming_language) "Python")
 
 ### Libraries & Framework
 
@@ -147,10 +166,20 @@ I used [Lucid charts](https://www.lucidchart.com/pages/) to design the flow char
 \
 &nbsp;
         
-
-
 ### User Stories Testing
 
+- Table of User Story Testing.
+
+    | User Story | Testing |
+    | :--- | :--- | 
+    |As a user, I want instructions on how to play the game.|On the home menu page selct number 2 to display the instructions for the game.|
+    |As a user, I want to have the option of selecting different levels of difficulty.|Select 1 on main menu to start game and the difficulty level option is display first, select 1 for easy (4 letter word), 2 for medium (4 letter word) or 3 for hard level (8 letter word).|
+    |As a user, I want to know if my inputs are valid and get feedback if not.|If you enter anything but a sinle alphabetical letter you will get an invalid iput message highlighted in Red|
+    |As a user, I want to know if my input is correct or not.|If letter is in word a correct message in green is displayed and the letter is placed in the secret word.|
+    |As a user, I want to know what inputs I have already made.|All your inputs already quessed are displayed in yellow, if you select the same letter again you do not loose an attempy but get a message highlighted in red that you alreay guessed that letter.|
+    |As a user, I want do know my current attempt status is during game.|The amount of attempts remaining are displayed at the top of the screen above the hangman stages.|
+    |As a user, I want to know correct word if I run out of attempts.|If you run out of attempts you will get a message highlighted in red that the game is over and underneath that is diplayed what the correct word was.|
+    |As a user, I want the option to play the game again when finished.|When game is over ther is a message displayed in Yellow to press return to go back to the main menu where you can start the game again.|
 
 &nbsp;
 [Back to Top](#table-of-contents)
@@ -161,7 +190,6 @@ I used [Lucid charts](https://www.lucidchart.com/pages/) to design the flow char
 
 
 
-   
 ### Unfixed Bugs
 
 
