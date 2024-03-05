@@ -10,7 +10,7 @@ def get_words_from_api(level):
     """
     try:
         if level == 1:  # Easy level
-            response = requests.get("https://random-word-api.herokuapp.com/word?lang=en&number=10&length=4")
+            response = requests.get("htps://random-word-api.herokuapp.com/word?lang=en&number=10&length=4")
         elif level == 2:  # Medium level
             response = requests.get("https://random-word-api.herokuapp.com/word?lang=en&number=10&length=6")
         elif level == 3:  # Hard level

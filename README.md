@@ -229,7 +229,6 @@ I used [Lucid charts](https://www.lucidchart.com/pages/) to design the flow char
 ### Languages
 
 * [HTML](https://en.wikipedia.org/wiki/HTML "HTML")
-* [CSS](https://en.wikipedia.org/wiki/CSS "CSS")
 * [JavaScript](https://en.wikipedia.org/wiki/JavaScript "JS")
 * [Python](https://en.wikipedia.org/wiki/Python_(programming_language) "Python")
 
