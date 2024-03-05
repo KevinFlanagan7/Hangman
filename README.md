@@ -145,6 +145,62 @@ I used [Lucid charts](https://www.lucidchart.com/pages/) to design the flow char
 
     ![Quit Page](/documentation/quit-page.png)
 
+### Game level Page
+
+- When option 1 is selected the select game level page is displayed with the options of 1 for easy level with 4 letter word, 2 for medium level with 6 letter word or 3 for hard level with 8 letter word. Again when an invakid input is made a message highlighted in red is displayed to input a number between 1 and 3.
+
+    <details><summary>Select Game level Page</summary>
+
+    ![Select Level](/documentation/select-level-page.png)
+
+### Game Page
+
+- Depending on the gane level selection the game page is displayed for easy, medium or hard. Using the [Random word API](https://random-word-api.herokuapp.com/home) website a word with 4, 6 or letters is randomly retrived from the api. Once an valid input is made it is checked if it is correct or incorrect. If correct a green correct message is displayed and all attempt remain. If incorrect an attempt is lost and 1 stage of the hangman is displayed.
+
+- If the random word API website is not available for any reason a rondom word is selected from a list of backup words from the words.py file.
+
+    <details><summary>Game Page Screenshots</summary>
+
+    *Easy Level*
+
+    ![Easy](/documentation/easy-level.png)
+
+    *Medium Level*
+
+    ![Medium](/documentation/medium-level.png)
+
+    *Hard Level*
+
+    ![Hard](/documentation/hard-level.png)
+
+    *Random Word API not available message*
+
+    [API not available]()
+
+### Game over Page
+
+- If all the letters in the word are quessed correctly a congratulations message is displayed and a message to press return to go back to main menu. If the player runs out of attempts a game over meassage is displyed in red and the correct word is displayed. Again a message to press enter to return to the main menu is displayed. If anything other than return is press an invalid input message to press return is displayed in red.
+
+- If anything other than a single aphabetical letter is entered or has not been already guessed an ivalid input message is displayed in red.
+
+    <details><summary>Game Over Screenshots</summary>
+
+    *Word guessed correctly*
+
+    ![Winner]()
+
+    *Game Over, no attempts remaining*
+
+    ![No Attempts left](/documentation/game-over-red.png)
+
+    *Invalid Guess Input*
+
+    ![Invalid input](/documentation/game-invalid-guess.png)
+
+    *Invalid Enter Input*
+
+    ![Invalid Enter](/documentation/game-over-invalid.png)
+
 
 
 
