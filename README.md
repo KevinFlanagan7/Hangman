@@ -175,7 +175,7 @@ I used [Lucid charts](https://www.lucidchart.com/pages/) to design the flow char
 
     *Random Word API not available message*
 
-    [API not available]()
+    ![API not available](/documentation/word-api-failure.png)
 
 ### Game over Page
 
@@ -200,19 +200,13 @@ I used [Lucid charts](https://www.lucidchart.com/pages/) to design the flow char
     *Invalid Enter Input*
 
     ![Invalid Enter](/documentation/game-over-invalid.png)
-
-
-
-
-    
+  
 
 \
 &nbsp;
 [Back to Top](#table-of-contents)
 \
 &nbsp;
-
-
 
 ## Features to be Implemented
 
@@ -283,6 +277,19 @@ I used [Lucid charts](https://www.lucidchart.com/pages/) to design the flow char
 &nbsp;
 
 ### Bugs
+
+- When I installed art ascii for welcome message it worked locally but not on the deployed site. I resolved by running the command  pip3 freeze > requirements.txt in the terminal to update the dependsies installed. Once app was rebuilt by Heroku the art was displayed on deployed site.
+
+    <details><summary>Bug</summary>
+
+    ![Bug]()
+
+- When new py file created I had problems with the run.py not running. This was because I did not have correct path to new files created. I saved new files in src folder so once i put correct path (eg. src.valiadation instead of just validation) in the problem was resolved.
+
+    <details><summary>Bug</summary>
+
+    ![Bug]()
+
 
 
 
