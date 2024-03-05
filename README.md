@@ -115,15 +115,38 @@ I used [Lucid charts](https://www.lucidchart.com/pages/) to design the flow char
 
 ## Existing Features
 
-### Home Page
+### Home Menu Page
 
-- The home page 
+- The home menu page includes a welcome message and the option to start game, read instructions or to quit game. 
 
-    <details><summary>Home Page</summary>
+    <details><summary>Home Menu Page</summary>
 
-    *Home Page*
+    ![Land](/documentation/welcome-yellow.png)
 
-    ![Land](/documentation/landing-mobile.png)
+- If the user inputs an invalid option an invalid message is displayed in Red with feedback to player to enter a number between 1 and 3.
+
+    <details><summary>Invalid Input message</summary>
+
+    ![Invalid Input](/documentation/menu-invalid.png)
+
+### Instructions page
+
+- When option 2 is entered the instructions page is displayed with the option to return to main menu once read. Again if an invalid input is made a message in red is displayed to press the enter key.
+
+    <details><summary>Instructions Page</summary>
+
+    ![Instructions](/documentation/instructions-page.png)
+
+### Quit Page
+
+- When option 3 is select the quit game page is displayed with a message that the player has quit game and to press on the Run Program buttom to re-start game.
+
+    <details><summary>Quit Game Page</summary>
+
+    ![Quit Page](/documentation/quit-page.png)
+
+
+
 
     
 
