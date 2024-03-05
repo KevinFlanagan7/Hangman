@@ -187,7 +187,7 @@ I used [Lucid charts](https://www.lucidchart.com/pages/) to design the flow char
 
     *Word guessed correctly*
 
-    ![Winner]()
+    ![Winner](/documentation/game-over-congrats.png)
 
     *Game Over, no attempts remaining*
 
