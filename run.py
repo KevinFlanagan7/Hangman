@@ -1,17 +1,15 @@
 from src.instructions import get_instructions
 from src.validation import validate_choice, validate_enter
-from src.utils import clear_screen
+from src.utils import clear_screen, select_level, display_menu
 from src.game import start_game
-from src.ascii_art import welcome
-from src.utils import select_level
 
-def display_menu():
-    welcome()
-    print("1. Start Game")
-    print("2. Instructions")
-    print("3. Quit\n")
-    
+
 def main():
+    """
+    This function displays the menu for the game.
+    It loops until the user selects a valid input
+    to play game, view instructions or quit game.
+    """
     while True:
         clear_screen()
         display_menu()
@@ -31,4 +29,6 @@ def main():
             print("Quitting game...")
             print("Press Run Program above to re-start game")
             break
+
+
 main()

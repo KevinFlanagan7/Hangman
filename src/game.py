@@ -1,4 +1,4 @@
-from src.ascii_art import hangman_stages
+from src.ascii_art import STAGES
 from src.utils import clear_screen
 from src.validation import validate_guess
 from src.api import get_words_from_api
@@ -16,8 +16,8 @@ def start_game(level):
    
     guessed_letters = []
     incorrect_guesses = 0
-    max_attempts = len(hangman_stages) - 1  
-    print(hangman_stages[incorrect_guesses])
+    max_attempts = len(STAGES) - 1  
+    print(STAGES[incorrect_guesses])
     
     while True:
         print("Word to guess:", display_word)
@@ -39,7 +39,7 @@ def start_game(level):
             # Update the display word to reveal the guessed letters
             display_word = " ".join([char if char in guessed_letters else "_" for char in secret_word])
 
-            print(hangman_stages[incorrect_guesses])
+            print(STAGES[incorrect_guesses])
 
         # Check if the player has guessed all the letters correctly
             if display_word.replace(" ","") == secret_word:
@@ -53,9 +53,9 @@ def start_game(level):
             print("Attempts remaining:", max_attempts - incorrect_guesses)
 
             if incorrect_guesses < max_attempts:
-                print(hangman_stages[incorrect_guesses])
+                print(STAGES[incorrect_guesses])
             else:
-                print(Fore.RED + hangman_stages[incorrect_guesses] + Style.RESET_ALL)
+                print(Fore.RED + STAGES[incorrect_guesses] + Style.RESET_ALL)
 
             # Check if the player has used all their attempts and displays secret word
             if incorrect_guesses == max_attempts:
