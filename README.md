@@ -96,12 +96,6 @@ I installed and used the [Colorama](https://pypi.org/project/colorama/) library 
 
 I used [Lucid charts](https://www.lucidchart.com/pages/) to design the flow charts below.
 
-*Initial design*
-
-![Flow chart](/documentation/hangman-flow-chart.png)
-
-*Updated design with game Level options*
-
 ![Flow chart](/documentation/hangman-flow-chart_2.png)
 
 
@@ -282,6 +276,21 @@ I used [Lucid charts](https://www.lucidchart.com/pages/) to design the flow char
 
 
 ### Features Testing
+
+- Home Menu Page Features
+
+    |Items being tested|Actions taken to test|Expected result|Outcome|
+    |---|---|---|---|
+    |Welcome message|Clicked on [Live Link](https://kevin-flanagan-hangman-6c9777c7535e.herokuapp.com/) in README.|The welcome message in yellow colour is displayed.|:white_check_mark:|
+    |Menu options|Clicked on [Live Link](https://kevin-flanagan-hangman-6c9777c7535e.herokuapp.com/) in README.|The options to start game, show instructions or quit game are displayed| :white_check_mark:|
+    |Input message|Clicked on [Live Link](https://kevin-flanagan-hangman-6c9777c7535e.herokuapp.com/) in README.|Message to input 1, 2 or 3 is is displayed|:white_check_mark:|
+
+    <details><summary>Home Menu Page Features</summary>
+
+    ![Home](/documentation/welcome-yellow.png)
+
+    
+
 
 
 \
