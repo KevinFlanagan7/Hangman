@@ -244,7 +244,41 @@ I used [Lucid charts](https://www.lucidchart.com/pages/) to design the flow char
 
 ### Code Validation
 
-- 
+- I used code institute's [Python Linter](https://pep8ci.herokuapp.com/#) to validate my code. No errors were found during final testing, screenshots of project files below:
+
+    <details><summary>Code Validation Screenshots</summary>
+
+    *run.py file*
+
+    ![Run](/documentation/run-file.png)
+
+    *api.py file*
+
+    ![API](/documentation/api-file.png)
+
+    *ascii_art*
+
+    ![ASCII](/documentation/ascii_art-file.png)
+
+    *game.py file*
+
+    ![Game](/documentation/game-file.png)
+
+    *instructions.py file*
+
+    ![Instructions](/documentation/instructions-file.png)
+
+    *utils*
+
+    ![Utils](/documentation/utils-file.png)
+
+    *validation.py file*
+
+    ![Validation](/documentation/validation-file.png)
+
+    *words.py file*
+
+    ![Words](/documentation/words-file.png)
 
 
 ### Features Testing
