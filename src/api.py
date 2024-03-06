@@ -1,22 +1,22 @@
-import requests
 import random
-from src.words import WORDS as backup_words
+import requests
 from colorama import Fore, Style
+from src.words import WORDS as backup_words
 
 
 def get_words_from_api(level):
     """
-    Retrieves words from the random-word-api.
-    If failed, uses backup words from words.py
+    Retrieves words from the random-word-api URL,
+    if failed, uses backup words from words.py
     """
     API_URL = "https://random-word-api.herokuapp.com/word?lang=en&number=10"
-    try:
+    try:     
         if level == 1:  # Easy level
-            response = requests.get(API_URL + "&length=4")
+            response = requests.get(API_URL + "&length=4", timeout=5)
         elif level == 2:  # Medium level
-            response = requests.get(API_URL + "&length=6")
+            response = requests.get(API_URL + "&length=6", timeout=5)
         elif level == 3:  # Hard level
-            response = requests.get(API_URL + "&length=8")
+            response = requests.get(API_URL + "&length=8", timeout=5)
 
         if response.status_code == 200:
             words = response.json()

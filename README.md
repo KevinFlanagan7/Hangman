@@ -139,7 +139,7 @@ I used [Lucid charts](https://www.lucidchart.com/pages/) to design the flow char
 
     ![Quit Page](/documentation/quit-page.png)
 
-### Game level Page
+### Game level Selection Page
 
 - When option 1 is selected the select game level page is displayed with the options of 1 for easy level with 4 letter word, 2 for medium level with 6 letter word or 3 for hard level with 8 letter word. Again when an invakid input is made a message highlighted in red is displayed to input a number between 1 and 3.
 
@@ -277,13 +277,13 @@ I used [Lucid charts](https://www.lucidchart.com/pages/) to design the flow char
 
 ### Features Testing
 
-- Home Menu Page Features
+- Home Menu Page 
 
     |Items being tested|Actions taken to test|Expected result|Outcome|
     |---|---|---|---|
     |Welcome message|Clicked on [Live Link](https://kevin-flanagan-hangman-6c9777c7535e.herokuapp.com/) in README.|The welcome message in yellow colour is displayed.|:white_check_mark:|
     |Menu options|Clicked on [Live Link](https://kevin-flanagan-hangman-6c9777c7535e.herokuapp.com/) in README.|The options to start game, show instructions or quit game are displayed| :white_check_mark:|
-    |Input message|Clicked on [Live Link](https://kevin-flanagan-hangman-6c9777c7535e.herokuapp.com/) in README.|Message to input 1, 2 or 3 is is displayed|:white_check_mark:|
+    |Input message|Clicked on [Live Link](https://kevin-flanagan-hangman-6c9777c7535e.herokuapp.com/) in README.|Message to input 1, 2 or 3 is displayed|:white_check_mark:|
     |Validation|Clicked on a number other than 1, 2 or 3, Clicked on letters and spacebar|Invalid input message displayed|:white_check_mark:|
 
     <details><summary>Home Menu Page Features</summary>
@@ -292,7 +292,25 @@ I used [Lucid charts](https://www.lucidchart.com/pages/) to design the flow char
 
     ![Invalid Input](/documentation/menu-invalid.png)
 
-- 
+- Game level Page
+
+    |Items being tested|Actions taken to test|Expected result|Outcome|
+    |---|---|---|---|
+
+- Instructions page
+
+    |Items being tested|Actions taken to test|Expected result|Outcome|
+    |---|---|---|---|
+
+- Quit Page
+
+    |Items being tested|Actions taken to test|Expected result|Outcome|
+    |---|---|---|---|
+
+- Game Page
+
+    |Items being tested|Actions taken to test|Expected result|Outcome|
+    |---|---|---|---|
 
     
 
