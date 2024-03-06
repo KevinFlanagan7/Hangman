@@ -284,10 +284,15 @@ I used [Lucid charts](https://www.lucidchart.com/pages/) to design the flow char
     |Welcome message|Clicked on [Live Link](https://kevin-flanagan-hangman-6c9777c7535e.herokuapp.com/) in README.|The welcome message in yellow colour is displayed.|:white_check_mark:|
     |Menu options|Clicked on [Live Link](https://kevin-flanagan-hangman-6c9777c7535e.herokuapp.com/) in README.|The options to start game, show instructions or quit game are displayed| :white_check_mark:|
     |Input message|Clicked on [Live Link](https://kevin-flanagan-hangman-6c9777c7535e.herokuapp.com/) in README.|Message to input 1, 2 or 3 is is displayed|:white_check_mark:|
+    |Validation|Clicked on a number other than 1, 2 or 3, Clicked on letters and spacebar|Invalid input message displayed|:white_check_mark:|
 
     <details><summary>Home Menu Page Features</summary>
 
     ![Home](/documentation/welcome-yellow.png)
+
+    ![Invalid Input](/documentation/menu-invalid.png)
+
+- 
 
     
 
