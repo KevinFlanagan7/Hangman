@@ -1,13 +1,16 @@
+from colorama import Fore, Style
 from src.ascii_art import STAGES
 from src.utils import clear_screen
 from src.validation import validate_guess
 from src.api import get_words_from_api
-from colorama import Fore, Style
 
 
 def start_game(level):
     """
     Starts the hangman game with the specified level selected.
+    Displays stages, secret word to be guessed, guessed letters,
+    Input for guesses and checks if correct.
+    Code inspiration from Youtube tutorial credited in README.
     """
     clear_screen()
     Info = "Try to guess the word by guessing one letter at a time."
@@ -50,7 +53,7 @@ def start_game(level):
 
             print(STAGES[incorrect_guesses])
 
-        # Check if the player has guessed all the letters correctly
+            # Check if the player has guessed all the letters correctly
             if display_word.replace(" ", "") == secret_word:
                 Congrats = "Congratulations! You've guessed the word:"
                 print(Fore.YELLOW + Congrats, secret_word + Style.RESET_ALL)

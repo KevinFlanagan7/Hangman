@@ -123,9 +123,17 @@ I used [Lucid charts](https://www.lucidchart.com/pages/) to design the flow char
 
     ![Invalid Input](/documentation/menu-invalid.png)
 
+### Game level Selection Page
+
+- When option 1 is selected the select game level page is displayed with the options of 1 for easy level with 4 letter word, 2 for medium level with 6 letter word or 3 for hard level with 8 letter word to guess. Again when an invalid input is made a message highlighted in red is displayed to input a number between 1 and 3.
+
+    <details><summary>Select Game level Page</summary>
+
+    ![Select Level](/documentation/select-level-page.png)
+
 ### Instructions page
 
-- When option 2 is entered the instructions page is displayed with the option to return to main menu once read. Again if an invalid input is made a message in red is displayed to press the enter key.
+- When option 2 is selected the instructions page is displayed with the option to return to main menu once read. Again if an invalid input is made a message in red is displayed to press the enter key.
 
     <details><summary>Instructions Page</summary>
 
@@ -133,23 +141,15 @@ I used [Lucid charts](https://www.lucidchart.com/pages/) to design the flow char
 
 ### Quit Page
 
-- When option 3 is select the quit game page is displayed with a message that the player has quit game and to press on the Run Program buttom to re-start game.
+- When option 3 is selected the quit game page is displayed with a message that the player has quit game and to press on the Run Program buttom to re-start game.
 
     <details><summary>Quit Game Page</summary>
 
     ![Quit Page](/documentation/quit-page.png)
 
-### Game level Selection Page
-
-- When option 1 is selected the select game level page is displayed with the options of 1 for easy level with 4 letter word, 2 for medium level with 6 letter word or 3 for hard level with 8 letter word. Again when an invakid input is made a message highlighted in red is displayed to input a number between 1 and 3.
-
-    <details><summary>Select Game level Page</summary>
-
-    ![Select Level](/documentation/select-level-page.png)
-
 ### Game Page
 
-- Depending on the gane level selection the game page is displayed for easy, medium or hard. Using the [Random word API](https://random-word-api.herokuapp.com/home) website a word with 4, 6 or letters is randomly retrived from the api. Once an valid input is made it is checked if it is correct or incorrect. If correct a green correct message is displayed and all attempt remain. If incorrect an attempt is lost and 1 stage of the hangman is displayed.
+- Depending on the game level selection the game page is displayed for easy, medium or hard. Using the [Random word API](https://random-word-api.herokuapp.com/home) website a word with 4, 6 or letters is randomly retrieved from the api. Once an valid input is made it is checked if it is correct or incorrect. If correct a green correct message is displayed and all 7 attempts remain. If incorrect an attempt is lost and the next stage of the hangman is displayed.
 
 - If the random word API website is not available for any reason a rondom word is selected from a list of backup words from the words.py file.
 
@@ -171,11 +171,9 @@ I used [Lucid charts](https://www.lucidchart.com/pages/) to design the flow char
 
     ![API not available](/documentation/word-api-failure.png)
 
-### Game over Page
+- If all the letters in the word are quessed correctly a congratulations message is displayed and a message to press return to go back to main menu. If the player runs out of attempts a game over meassage and the last hangman stage is displyed in red and the correct word is displayed. Again a message to press enter to return to the main menu is displayed. If anything other than enter is pressed an invalid input message to press enter key is displayed in red.
 
-- If all the letters in the word are quessed correctly a congratulations message is displayed and a message to press return to go back to main menu. If the player runs out of attempts a game over meassage is displyed in red and the correct word is displayed. Again a message to press enter to return to the main menu is displayed. If anything other than return is press an invalid input message to press return is displayed in red.
-
-- If anything other than a single aphabetical letter is entered or has not been already guessed an ivalid input message is displayed in red.
+- If anything other than a single aphabetical letter is entered or the letter has already been guessed an ivalid input message is displayed in red.
 
     <details><summary>Game Over Screenshots</summary>
 
@@ -187,11 +185,11 @@ I used [Lucid charts](https://www.lucidchart.com/pages/) to design the flow char
 
     ![No Attempts left](/documentation/game-over-red.png)
 
-    *Invalid Guess Input*
+    *Invalid guess input*
 
     ![Invalid input](/documentation/game-invalid-guess.png)
 
-    *Invalid Enter Input*
+    *Invalid enter input*
 
     ![Invalid Enter](/documentation/game-over-invalid.png)
   
@@ -204,7 +202,7 @@ I used [Lucid charts](https://www.lucidchart.com/pages/) to design the flow char
 
 ## Features to be Implemented
 
-- In the future I would like to implement google sheets as a database to transfer scores and username of player. The score would be calculated based on the amount of attempts used to guess word correctly. Then display that data as a leaderboard for each of the levels. 
+- In the future I would like to implement google sheets as a database to export scores and username of player. The score would be calculated based on the amount of attempts used to guess word correctly. The username and scores would then be imported and displayed on a leaderboard for each of the levels. 
 
 \
 &nbsp;
@@ -216,16 +214,23 @@ I used [Lucid charts](https://www.lucidchart.com/pages/) to design the flow char
 
 ### Languages
 
-* [HTML](https://en.wikipedia.org/wiki/HTML "HTML")
-* [JavaScript](https://en.wikipedia.org/wiki/JavaScript "JS")
+* [HTML](https://en.wikipedia.org/wiki/HTML "HTML") Included in CI Template.
+* [JavaScript](https://en.wikipedia.org/wiki/JavaScript "JS") Included in CI Template.
 * [Python](https://en.wikipedia.org/wiki/Python_(programming_language) "Python")
 
 ### Libraries & Framework
 
-* 
+* [Colorama](https://pypi.org/project/colorama/)
+* [ASCII Generator](https://pypi.org/project/pyfiglet/)
+* [API Requests](https://pypi.org/project/requests/)
+* [OS](https://pypi.org/project/os-sys/)
+* [Math Random](https://www.w3schools.com/python/module_random.asp)
 
 ### Tools
-* []()
+* [Lucid Charts](https://www.lucidchart.com/pages/)
+* [Python Validator](https://pep8ci.herokuapp.com/)
+* [Heroku](https://dashboard.heroku.com/apps)
+
 
 
 \
@@ -344,14 +349,13 @@ I used [Lucid charts](https://www.lucidchart.com/pages/) to design the flow char
 
     |Items being tested|Actions taken to test|Expected result|Outcome|
     |---|---|---|---|
-    |Easy Level|Entered 1 on game level page|Easy level with 4 letter word displayed along with 1st hangman stage, word to guess, guessed letters option to input guess|:white_check_mark:|
-    |Medium Level|Entered 2 on game level page|Medium level with 6 letter word displayed|:white_check_mark:|
-    |Hard Level|Entered 3 on game level page|Hard level with 8 letter word displayed|:white_check_mark:|
+    |Easy Level|Entered 1 on game level page|Easy level with 4 letter word to guess displayed along with 1st hangman stage, word to guess, guessed letters and option to input guess|:white_check_mark:|
+    |Medium Level|Entered 2 on game level page|Medium level with 6 letter word to guess displayed|:white_check_mark:|
+    |Hard Level|Entered 3 on game level page|Hard level with 8 letter word to guess displayed|:white_check_mark:|
     |Backup Words|Removed URL for random word API|Failed to retrieve words from API message displayed|:white_check_mark:|
     |Invalid Guess|Entered numbers, spaces, 2 letters and letters already guessed|Invalid input message displayed|:white_check_mark:|
     |Guessed word correctly|Successfully guessed word|Congratulations message in Yellow displayed and option to return to main menu|:white_check_mark:|
     |Guessed word Incorrectly|Incorrectly guessed word|Game Over message in Red displayed, final hangman stage displayed in Red, correct word displayed and option to return to main menu|:white_check_mark:|
-
 
     <details><summary>Game Page Features</summary>
 
@@ -383,11 +387,6 @@ I used [Lucid charts](https://www.lucidchart.com/pages/) to design the flow char
 
     ![Game Over](/documentation/game-over-red.png)
 
-
-    
-
-
-
 \
 &nbsp;
 [Back to Top](#table-of-contents)
@@ -400,14 +399,14 @@ I used [Lucid charts](https://www.lucidchart.com/pages/) to design the flow char
 
     | User Story | Testing |
     | :--- | :--- | 
-    |As a user, I want instructions on how to play the game.|On the home menu page selct number 2 to display the instructions for the game.|
-    |As a user, I want to have the option of selecting different levels of difficulty.|Select 1 on main menu to start game and the difficulty level option is display first, select 1 for easy (4 letter word), 2 for medium (4 letter word) or 3 for hard level (8 letter word).|
+    |As a user, I want instructions on how to play the game.|On the home menu page select number 2 to display the instructions for the game.|
+    |As a user, I want to have the option of selecting different levels of difficulty.|Select 1 on main menu to start game and the difficulty level option is displayed. Select 1 for easy (4 letter word), 2 for medium (6 letter word) or 3 for hard level (8 letter word).|
     |As a user, I want to know if my inputs are valid and get feedback if not.|If you enter anything but a sinle alphabetical letter you will get an invalid iput message highlighted in Red|
     |As a user, I want to know if my input is correct or not.|If letter is in word a correct message in green is displayed and the letter is placed in the secret word.|
-    |As a user, I want to know what inputs I have already made.|All your inputs already quessed are displayed in yellow, if you select the same letter again you do not loose an attempy but get a message highlighted in red that you alreay guessed that letter.|
-    |As a user, I want do know my current attempt status is during game.|The amount of attempts remaining are displayed at the top of the screen above the hangman stages.|
+    |As a user, I want to know what inputs I have already made.|All your inputs already quessed are displayed in yellow, if you select the same letter again you do not lose an attempt but get a message highlighted in red that you alreay guessed that letter.|
+    |As a user, I want to know what my current attempt status is during game.|The amount of attempts remaining are displayed at the top of the screen above the hangman stages.|
     |As a user, I want to know correct word if I run out of attempts.|If you run out of attempts you will get a message highlighted in red that the game is over and underneath that is diplayed what the correct word was.|
-    |As a user, I want the option to play the game again when finished.|When game is over ther is a message displayed in Yellow to press return to go back to the main menu where you can start the game again.|
+    |As a user, I want the option to play the game again when finished.|When game is over there is a message displayed in Yellow to press return to go back to the main menu where you can start the game again.|
 
 &nbsp;
 [Back to Top](#table-of-contents)
@@ -416,9 +415,9 @@ I used [Lucid charts](https://www.lucidchart.com/pages/) to design the flow char
 
 ### Bugs
 
-- When I installed art ascii for welcome message it worked locally but not on the deployed site. I resolved by running the command  pip3 freeze > requirements.txt in the terminal to update the dependsies installed. Once app was rebuilt by Heroku the art was displayed on deployed site.
+- When I installed art ascii for welcome message it worked locally but not on the deployed site. I resolved problem by running the command  `pip3 freeze > requirements.txt` again in the terminal to update the dependencies installed. Once app was rebuilt by Heroku the art was displayed on deployed site.
 
-- When new py file created I had problems with the run.py not running. This was because I did not have correct path to new files created. I saved new files in src folder so once i put correct path (eg. src.valiadation instead of just validation) in the problem was resolved.
+- When new py file created I had problems with the run.py not running. This was because I did not have correct path to new files created. I saved new files in src folder so once I put correct path (eg. src.valiadation instead of just validation) in the problem was resolved.
 
     <details><summary>Incorrect Path</summary>
 
@@ -426,12 +425,9 @@ I used [Lucid charts](https://www.lucidchart.com/pages/) to design the flow char
 
 - Following the recommendation in the deployment video of the Love Sanwiches walkthrough project, I added a new line character `\n` to all inputs to avoid potential bug in the software used to create the mock terminal causing the text not to show up in the input terminal.
 
-
-
-
 ### Unfixed Bugs
 
-
+- There are no bugs with the game that I am aware of.
 
 \
 &nbsp;
@@ -473,6 +469,8 @@ The site was deployed using Heroku following the steps below:
 
 - Scroll down on page and select either **Enable Automatic Deploys** which will rebuild your app every time you push a new change to GitHub or **Deploy Branch** which is a manual deployment so has to be selected after each change pushed to GitHub.
 
+- Once app is built you can click on **Open app** at top of page which will open app on new page where you can copy URL. 
+
 ### Fork
 
 To make a copy of a repository or to fork it using Github follow below steps:
@@ -504,12 +502,16 @@ For help and advice:
 
 - [Simen Daehlin](https://github.com/Eventyret "Simen Daehlin")
 
+Code inspiration:
 
+- [Love Sandwichwes and LMS from Codeinstitute](https://codeinstitute.net "Love Sandwiches Project")
+
+Code inspiration for guessing letters in game:
+
+- [Youtube CodeFather Tutotial](https://www.youtube.com/watch?v=gJBeYcqHNCM&t=1044s "Youtube")
 
 \
 &nbsp;
 [Back to Top](#table-of-contents)
 \
 &nbsp;
-
-
