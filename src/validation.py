@@ -24,8 +24,8 @@ def validate_enter():
     Validates that the user presses Enter to go back to the main menu.
     """
     while True:
-        Press_Enter = "Press Enter to go back to the main menu..."
-        Invalid = "Invalid input, press Enter to go back to the main menu..."
+        Press_Enter = "Press Enter to go back to the main menu...\n"
+        Invalid = "Invalid input, press Enter to go back to the main menu...\n"
         try:
             user_input = input(Fore.YELLOW + Press_Enter + Style.RESET_ALL)
             if user_input == "":

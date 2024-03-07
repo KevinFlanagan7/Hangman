@@ -418,15 +418,13 @@ I used [Lucid charts](https://www.lucidchart.com/pages/) to design the flow char
 
 - When I installed art ascii for welcome message it worked locally but not on the deployed site. I resolved by running the command  pip3 freeze > requirements.txt in the terminal to update the dependsies installed. Once app was rebuilt by Heroku the art was displayed on deployed site.
 
-    <details><summary>Bug</summary>
-
-    ![Bug]()
-
 - When new py file created I had problems with the run.py not running. This was because I did not have correct path to new files created. I saved new files in src folder so once i put correct path (eg. src.valiadation instead of just validation) in the problem was resolved.
 
-    <details><summary>Bug</summary>
+    <details><summary>Incorrect Path</summary>
 
-    ![Bug]()
+    ![Incorrect Path](/documentation/incorrect-path-bug.png)
+
+- Following the recommendation in the deployment video of the Love Sanwiches walkthrough project, I added a new line character `\n` to all inputs to avoid potential bug in the software used to create the mock terminal causing the text not to show up in the input terminal.
 
 
 

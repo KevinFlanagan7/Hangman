@@ -29,7 +29,7 @@ def start_game(level):
         print(f"{Fore.YELLOW}\nGuessed letters: {Guessed}{Style.RESET_ALL}")
 
         while True:
-            guess = input("Enter a letter and press enter: ").lower()
+            guess = input("Enter a letter and press enter:\n").lower()
 
             if validate_guess(guess, guessed_letters):
                 break
