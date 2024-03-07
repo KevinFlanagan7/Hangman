@@ -288,7 +288,11 @@ I used [Lucid charts](https://www.lucidchart.com/pages/) to design the flow char
 
     <details><summary>Home Menu Page Features</summary>
 
+    *Home page*
+
     ![Home](/documentation/welcome-yellow.png)
+
+    *Invalid input*
 
     ![Invalid Input](/documentation/menu-invalid.png)
 
@@ -296,21 +300,89 @@ I used [Lucid charts](https://www.lucidchart.com/pages/) to design the flow char
 
     |Items being tested|Actions taken to test|Expected result|Outcome|
     |---|---|---|---|
+    |Game levels|Entered number 1 on main menu|Game level selection page displayed and options to enter 1, 2 or 3 for easy, medium or hard level|:white_check_mark:|
+    |Validation|Clicked on a number other than 1, 2 or 3, Clicked on letters and spacebar|Invalid input message displayed|:white_check_mark:|
+
+    <details><summary>Game Level Page Features</summary>
+
+    *Game levels*
+
+    ![Levels](/documentation/start-game-yellow.png)
+
+    *Invalid input*
+
+    ![Invalid](/documentation/select-level-page.png)
+
 
 - Instructions page
 
     |Items being tested|Actions taken to test|Expected result|Outcome|
     |---|---|---|---|
+    |Instructions|Entered number 2 on main menu|Instructions page displayed with message to press return to go back to main menu|:white_check_mark:|
+    |Validation|Pressed keys other than return key|Invalid input message displayed|:white_check_mark:|
+    |Return|Pressed return key|Main main page displayed|:white_check_mark:|
+
+    <details><summary>Instructions Page Features</summary>
+
+    *Instructions page*
+
+    ![Invalid](/documentation/instructions-page.png)
 
 - Quit Page
 
     |Items being tested|Actions taken to test|Expected result|Outcome|
     |---|---|---|---|
+    |Quit game|Entered number 3 on main menu|Message quiting game and to press run program button to re-start displayed|:white_check_mark:|
+
+    <details><summary>Quit Page Features</summary>
+
+    *Quit page*
+
+    ![Quit](/documentation/quit-page.png)
 
 - Game Page
 
     |Items being tested|Actions taken to test|Expected result|Outcome|
     |---|---|---|---|
+    |Easy Level|Entered 1 on game level page|Easy level with 4 letter word displayed along with 1st hangman stage, word to guess, guessed letters option to input guess|:white_check_mark:|
+    |Medium Level|Entered 2 on game level page|Medium level with 6 letter word displayed|:white_check_mark:|
+    |Hard Level|Entered 3 on game level page|Hard level with 8 letter word displayed|:white_check_mark:|
+    |Backup Words|Removed URL for random word API|Failed to retrieve words from API message displayed|:white_check_mark:|
+    |Invalid Guess|Entered numbers, spaces, 2 letters and letters already guessed|Invalid input message displayed|:white_check_mark:|
+    |Guessed word correctly|Successfully guessed word|Congratulations message in Yellow displayed and option to return to main menu|:white_check_mark:|
+    |Guessed word Incorrectly|Incorrectly guessed word|Game Over message in Red displayed, final hangman stage displayed in Red, correct word displayed and option to return to main menu|:white_check_mark:|
+
+
+    <details><summary>Game Page Features</summary>
+
+    *Easy*
+
+    ![Easy](/documentation/easy-level.png)
+
+    *Medium*
+
+    ![Medium](/documentation/medium-level.png)
+
+    *Hard*
+
+    ![Hard](/documentation/hard-level.png)
+
+    *Backup*
+
+    ![Backup](/documentation/word-api-failure.png)
+
+    *Invalid input*
+
+    ![Invalid](/documentation/game-invalid-guess.png)
+
+    *Guessed correctly*
+
+    ![Congrats](/documentation/game-over-congrats.png)
+
+    *Guessed incorrectly*
+
+    ![Game Over](/documentation/game-over-red.png)
+
 
     
 
