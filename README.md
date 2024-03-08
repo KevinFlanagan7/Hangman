@@ -2,14 +2,14 @@
 
 # Hangman
 
-## Goal for this Project
+## Project Goals
 
-The goal of this project is to create a Python based terminal game of hangman. The words will be randomly selected from an API and if API is not available will be selected from a list of backup words file. All user inputs to be validated and feedback to the player if any invalid inputs are made.  
+The goal of this project is to create a Python based terminal game of hangman. The words will be randomly selected from an API and if API is not available, random backup words will be retrieved from the words.py file. All user inputs to be validated and feedback to the player if any invalid inputs are made.  
 
 ## Table of Contents
 
 - [Hangman](#hangman)
-- [Goal for this Project](#goal-for-this-project)
+- [Project Goals](#project-goals)
 - [Table of Contents](#table-of-contents)
 - [UX](#ux)
   - [User Stories](#user-stories)
@@ -75,7 +75,7 @@ My Python code is seperated into different files called modules and located in a
 
 ### Colours & ASCII Art
 
-I installed and used the [Colorama](https://pypi.org/project/colorama/) library to add colour to my project. I also instaleed [pyfiglet](https://www.geeksforgeeks.org/python-ascii-art-using-pyfiglet-module/) for the welcome message ascii art font.
+I installed the [Colorama](https://pypi.org/project/colorama/) and [pyfiglet](https://www.geeksforgeeks.org/python-ascii-art-using-pyfiglet-module/) libraries for the project colours and ascii art font for the Welcome message.
 
 - I mostly used Yellow for sharper contrast throughout my project. This includes the welcome message, prompts for user inputs and Congratulations message if word was guessed correctly.
 
@@ -297,7 +297,7 @@ I used [Lucid charts](https://www.lucidchart.com/pages/) to design the flow char
 
     ![API](/documentation/api-file.png)
 
-    *ascii_art*
+    *ascii_art.py file*
 
     ![ASCII](/documentation/ascii_art-file.png)
 
@@ -309,7 +309,7 @@ I used [Lucid charts](https://www.lucidchart.com/pages/) to design the flow char
 
     ![Instructions](/documentation/instructions-file.png)
 
-    *utils*
+    *utils.py file*
 
     ![Utils](/documentation/utils-file.png)
 
