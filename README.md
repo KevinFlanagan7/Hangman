@@ -27,6 +27,7 @@ The goal of this project is to create a Python based terminal game of hangman. T
     - [Code Validation](#code-validation)
     - [Features Testing](#features-testing)
     - [User Stories Testing](#user-stories-testing)
+    - [Browser Compatibility](#browser-compatibility)
     - [Bugs](#bugs)
     - [Unfixed Bugs](#unfixed-bugs)
 - [Deployment](#deployment)
@@ -467,6 +468,37 @@ I used [Lucid charts](https://www.lucidchart.com/pages/) to design the flow char
     |As a user, I want to know correct word if I run out of attempts.|If you run out of attempts you will get a message highlighted in red that the game is over and underneath that is diplayed what the correct word was.|
     |As a user, I want the option to play the game again when finished.|When game is over there is a message displayed in Yellow to press return to go back to the main menu where you can start the game again.|
 
+\
+&nbsp;
+[Back to Top](#table-of-contents)
+\
+&nbsp;
+
+### Browser Compatibility
+
+- Table of Browsers tested, as the project is terminal based mobile device testing was not applicable.
+
+  | Browser | Intented Appearance | Intented Responsiveness | 
+    | --------| ------------------- | ----------------------- |
+    | Chrome  | Good | Good | 
+    | Edge    | Good | Good | 
+    | Firefox | Good | Good |
+
+    <details><summary>Browser compatibility Screenshots</summary>
+
+    *Chrome*
+
+    ![Chrome](/documentation/chrome.png) 
+
+    *Edge*
+
+    ![Edge](/documentation/edge.png)
+
+    *Firefox*
+
+    ![Firefox](/documentation/firefox.png)
+
+\
 &nbsp;
 [Back to Top](#table-of-contents)
 \
