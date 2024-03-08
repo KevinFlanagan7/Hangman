@@ -4,7 +4,7 @@
 
 ## Project Goals
 
-The goal of this project is to create a Python based terminal game of hangman. The words will be randomly selected from an API and if API is not available, random backup words will be retrieved from the words.py file. All user inputs to be validated and feedback to the player if any invalid inputs are made.  
+The goal of this project is to create a Python based interactive terminal game of hangman. The words will be randomly selected from an API and if API is not available, random backup words will be retrieved from the words.py file. All user inputs to be validated and feedback to the player if any invalid inputs are made.  
 
 ## Table of Contents
 
@@ -34,6 +34,7 @@ The goal of this project is to create a Python based terminal game of hangman. T
     - [Fork](#fork)
     - [Clone](#clone)
 - [Credits](#credits)
+- [Comments](#comments)
 
 ## UX
 
@@ -268,8 +269,8 @@ I used [Lucid charts](https://www.lucidchart.com/pages/) to design the flow char
 * [Colorama](https://pypi.org/project/colorama/)
 * [ASCII Art Generator](https://pypi.org/project/pyfiglet/)
 * [API Requests](https://pypi.org/project/requests/)
-* [OS](https://pypi.org/project/os-sys/)
-* [Math Random](https://www.w3schools.com/python/module_random.asp)
+* [OS for clear screen](https://pypi.org/project/os-sys/)
+* [Random module](https://www.w3schools.com/python/module_random.asp)
 * [Random words API](https://random-word-api.herokuapp.com/home)
 * [Lucid Charts](https://www.lucidchart.com/pages/)
 * [Python Validator](https://pep8ci.herokuapp.com/)
@@ -506,7 +507,7 @@ I used [Lucid charts](https://www.lucidchart.com/pages/) to design the flow char
 
 - When I installed art ascii for welcome message it worked locally but not on the deployed site. I resolved problem by running the command  `pip3 freeze > requirements.txt` again in the terminal to update the dependencies installed. Once app was rebuilt by Heroku the art was displayed on deployed site.
 
-- When new py file created I had problems with the run.py not running. This was because I did not have correct path to new files created. I saved new files in src folder so once I put correct path (eg. src.valiadation instead of just validation) in the problem was resolved.
+- When new py file created I had problems with the run.py file not running. This was because I did not have the correct path to new files created. I saved new files in src folder so once I put correct path (eg. src.valiadation instead of just validation) in the problem was resolved.
 
     <details><summary>Incorrect Path</summary>
 
@@ -540,7 +541,7 @@ The site was deployed using Heroku following the steps below:
 
 - Click on the **Settings** tab of the newly created app.
 
-- Go to **Config Vars** section and in the field for KEY enter **PORT**, in the VALUE field enter *8000* and then click **ADD**.
+- Go to **Config Vars** section and in the field for KEY enter **PORT**, in the VALUE field enter **8000** and then click **ADD**.
 
 - If your project uses a **creds.json** file you will need to set a config var by adding **CREDS** to KEY field and copying contents of creds.json file into **VALUE** field.
 
@@ -600,6 +601,10 @@ Code inspiration:
 Code inspiration for guessing letters in game:
 
 - [Youtube CodeFather Tutotial](https://www.youtube.com/watch?v=gJBeYcqHNCM&t=1044s "Youtube")
+
+## Comments
+
+Please note the first 18 commit messages are in the past tense, indicative mood, the remaining are in the imperative mood. After starting this project I got my result for project 2 which included feedback to write my commit messages in the imperative mood. I wrote my commit mesages for project 1 in the past tense and when I got my result there was no feedback to say my commit messages should be in imperative mood. As a result I continued to write them in the past tense for project 2 and the start of this project until I got the feedback for project 2. 
 
 \
 &nbsp;
