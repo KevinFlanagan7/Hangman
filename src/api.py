@@ -10,7 +10,7 @@ def get_words_from_api(level):
     if failed, uses backup words from words.py
     """
     API_URL = "https://random-word-api.herokuapp.com/word?lang=en&number=10"
-    try:     
+    try:
         if level == 1:  # Easy level
             response = requests.get(API_URL + "&length=4", timeout=5)
         elif level == 2:  # Medium level

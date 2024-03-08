@@ -21,8 +21,7 @@ The goal of this project is to create a Python based terminal game of hangman. T
     - [Features to be implemented](#features-to-be-implemented)
 - [Technologies used](#technologies-used)
     - [Languages](#languages)
-    - [Libraries & Framework](#libraries--framework)
-    - [Tools](#tools)
+    - [Tools & Libraries](#tools--libraries)
 - [Testing](#testing)
     - [Code Validation](#code-validation)
     - [Features Testing](#features-testing)
@@ -267,11 +266,10 @@ I used [Lucid charts](https://www.lucidchart.com/pages/) to design the flow char
 ### Tools & Libraries
 
 * [Colorama](https://pypi.org/project/colorama/)
-* [ASCII Generator](https://pypi.org/project/pyfiglet/)
+* [ASCII Art Generator](https://pypi.org/project/pyfiglet/)
 * [API Requests](https://pypi.org/project/requests/)
 * [OS](https://pypi.org/project/os-sys/)
 * [Math Random](https://www.w3schools.com/python/module_random.asp)
-* [pyfiglet](https://www.geeksforgeeks.org/python-ascii-art-using-pyfiglet-module/)
 * [Random words API](https://random-word-api.herokuapp.com/home)
 * [Lucid Charts](https://www.lucidchart.com/pages/)
 * [Python Validator](https://pep8ci.herokuapp.com/)

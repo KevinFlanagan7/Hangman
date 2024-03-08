@@ -1,6 +1,6 @@
 import os
-from src.validation import validate_choice
 from colorama import Fore, Style
+from src.validation import validate_choice
 from src.ascii_art import welcome
 
 
