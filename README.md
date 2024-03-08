@@ -4,7 +4,7 @@
 
 ## Goal for this Project
 
-Welcome to the Hangman. The goal of this project is to create a Python based terminal game of hangman. The words will be randomly selected from an API and if API not available will be selected from a list of words stored locally in program. All user inputs to be validated and feedback to the player if any invalid inputs are made.  
+The goal of this project is to create a Python based terminal game of hangman. The words will be randomly selected from an API and if API is not available will be selected from a list of backup words file. All user inputs to be validated and feedback to the player if any invalid inputs are made.  
 
 ## Table of Contents
 
@@ -14,13 +14,14 @@ Welcome to the Hangman. The goal of this project is to create a Python based ter
 - [UX](#ux)
   - [User Stories](#user-stories)
   - [Design](#design)
-    - [Colours](#colours)
+    - [Colours & ASCII Art](#colours--ascii-art)
 - [Flow Chart](#flow-chart)
 - [Features](#features)
     - [Existing Features](#existing-features)
     - [Features to be implemented](#features-to-be-implemented)
 - [Technologies used](#technologies-used)
     - [Languages](#languages)
+    - [Libraries & Framework](#libraries--framework)
     - [Tools](#tools)
 - [Testing](#testing)
     - [Code Validation](#code-validation)
@@ -29,6 +30,7 @@ Welcome to the Hangman. The goal of this project is to create a Python based ter
     - [Bugs](#bugs)
     - [Unfixed Bugs](#unfixed-bugs)
 - [Deployment](#deployment)
+    - [Heroku](#heroku)
     - [Fork](#fork)
     - [Clone](#clone)
 - [Credits](#credits)
@@ -51,40 +53,73 @@ Welcome to the Hangman. The goal of this project is to create a Python based ter
 
 * As a user, I want to know correct word if I run out of attempts. 
 
-* As a user, I want the option to play the game again when finished. 
+* As a user, I want the option to play the game again when finished.
+
+\
+&nbsp;
+[Back to Top](#table-of-contents)
+\
+&nbsp;
 
 ## Design
 
-I used the code institite's [Python Essentials template](https://github.com/Code-Institute-Org/python-essentials-template) for my project which included the HTML and JavaScript code. 
+I used the code institite's [Python Essentials template](https://github.com/Code-Institute-Org/python-essentials-template) for my project, the template included the HTML and JavaScript code which I did not alter.  
 
-### Colours
+My Python code is seperated into different files called modules and located in a source(src) folder. These modules can then be imported and used in other files. This process design of **modular programming** promotes better code organization, reusability, and maintainability. I ensured that there was no **circular dependencies** which occurs when module A for example imports a function from module B and vice versa. Circular dependencies can lead to errors and make code difficult to manage.
 
-I installed and used the [Colorama](https://pypi.org/project/colorama/) library to add colour to my project, below are the different colours used:
+\
+&nbsp;
+[Back to Top](#table-of-contents)
+\
+&nbsp;
 
-- I mostly used Yellow throughout my project for the welcome message, prompts for user inputs and Congratulations message if word was guessed correctly.
+### Colours & ASCII Art
 
-    <details><summary>Yellow Colour</summary>
+I installed and used the [Colorama](https://pypi.org/project/colorama/) library to add colour to my project. I also instaleed [pyfiglet](https://www.geeksforgeeks.org/python-ascii-art-using-pyfiglet-module/) for the welcome message ascii art font.
 
-    ![Yellow](/documentation/welcome-yellow.png)
-    ![Start](/documentation/start-game-yellow.png)
+- I mostly used Yellow for sharper contrast throughout my project. This includes the welcome message, prompts for user inputs and Congratulations message if word was guessed correctly.
+
+    <details><summary>Colour and ASCII Screenshots</summary>
+
+    *Home page*
+
+    ![Home](/documentation/welcome-yellow.png)
+
+    *Level page*
+
+    ![Game Level](/documentation/start-game-yellow.png)
+
+    *Game page*
+
     ![Game](/documentation/game-yellow.png)
 
+    *Guessed word correctly*
+
+    ![Winner](/documentation/game-over-congrats.png)
 
 - I used green as feedback to the player that their guessed letter was correct.
 
-    <details><summary>Green for Correct Guess</summary>
+    <details><summary>Colour Screenshot</summary>
+
+    *Green for correct guess*
 
     ![Correct](/documentation/correct-green.png)
 
-- I used red as feedback to the player that their guess was incorrect, that the game was over and if they made an invalid input.
+- I used red as feedback to the player that their guess was incorrect, that their input was invalid and that the game was over after running out of attempts.
 
-    <details><summary>Red for Incorrect Guess</summary>
+    <details><summary>Colour Screenshots</summary>
+
+    *Incorrect guess*
 
     ![Red Incorrect](/documentation/incorrect-red.png)
+
+    *Invalid input*
+
     ![Invalid](/documentation/invalid-red.png)
+
+    *Game over*
+
     ![Game Over](/documentation/game-over-red.png)
-
-
 
 \
 &nbsp;
@@ -94,10 +129,9 @@ I installed and used the [Colorama](https://pypi.org/project/colorama/) library 
 
 ## Flow Chart
 
-I used [Lucid charts](https://www.lucidchart.com/pages/) to design the flow charts below.
+I used [Lucid charts](https://www.lucidchart.com/pages/) to design the flow charts below for the project.
 
 ![Flow chart](/documentation/hangman-flow-chart_2.png)
-
 
 \
 &nbsp;
@@ -131,6 +165,12 @@ I used [Lucid charts](https://www.lucidchart.com/pages/) to design the flow char
 
     ![Select Level](/documentation/select-level-page.png)
 
+\
+&nbsp;
+[Back to Top](#table-of-contents)
+\
+&nbsp;
+
 ### Instructions page
 
 - When option 2 is selected the instructions page is displayed with the option to return to main menu once read. Again if an invalid input is made a message in red is displayed to press the enter key.
@@ -146,6 +186,12 @@ I used [Lucid charts](https://www.lucidchart.com/pages/) to design the flow char
     <details><summary>Quit Game Page</summary>
 
     ![Quit Page](/documentation/quit-page.png)
+
+\
+&nbsp;
+[Back to Top](#table-of-contents)
+\
+&nbsp;
 
 ### Game Page
 
@@ -193,7 +239,6 @@ I used [Lucid charts](https://www.lucidchart.com/pages/) to design the flow char
 
     ![Invalid Enter](/documentation/game-over-invalid.png)
   
-
 \
 &nbsp;
 [Back to Top](#table-of-contents)
@@ -218,20 +263,18 @@ I used [Lucid charts](https://www.lucidchart.com/pages/) to design the flow char
 * [JavaScript](https://en.wikipedia.org/wiki/JavaScript "JS") Included in CI Template.
 * [Python](https://en.wikipedia.org/wiki/Python_(programming_language) "Python")
 
-### Libraries & Framework
+### Tools & Libraries
 
 * [Colorama](https://pypi.org/project/colorama/)
 * [ASCII Generator](https://pypi.org/project/pyfiglet/)
 * [API Requests](https://pypi.org/project/requests/)
 * [OS](https://pypi.org/project/os-sys/)
 * [Math Random](https://www.w3schools.com/python/module_random.asp)
-
-### Tools
+* [pyfiglet](https://www.geeksforgeeks.org/python-ascii-art-using-pyfiglet-module/)
+* [Random words API](https://random-word-api.herokuapp.com/home)
 * [Lucid Charts](https://www.lucidchart.com/pages/)
 * [Python Validator](https://pep8ci.herokuapp.com/)
 * [Heroku](https://dashboard.heroku.com/apps)
-
-
 
 \
 &nbsp;
@@ -279,6 +322,11 @@ I used [Lucid charts](https://www.lucidchart.com/pages/) to design the flow char
 
     ![Words](/documentation/words-file.png)
 
+\
+&nbsp;
+[Back to Top](#table-of-contents)
+\
+&nbsp;
 
 ### Features Testing
 
@@ -318,6 +366,11 @@ I used [Lucid charts](https://www.lucidchart.com/pages/) to design the flow char
 
     ![Invalid](/documentation/select-level-page.png)
 
+\
+&nbsp;
+[Back to Top](#table-of-contents)
+\
+&nbsp;
 
 - Instructions page
 
@@ -344,6 +397,12 @@ I used [Lucid charts](https://www.lucidchart.com/pages/) to design the flow char
     *Quit page*
 
     ![Quit](/documentation/quit-page.png)
+
+\
+&nbsp;
+[Back to Top](#table-of-contents)
+\
+&nbsp;
 
 - Game Page
 
@@ -437,6 +496,8 @@ I used [Lucid charts](https://www.lucidchart.com/pages/) to design the flow char
 
 ## Deployment
 
+### Heroku
+
 The site was deployed using Heroku following the steps below:
 
 - Create a list of requirements using the following command in the terminal (pip3 freeze > requirements.txt).
@@ -451,7 +512,7 @@ The site was deployed using Heroku following the steps below:
 
 - Go to **Config Vars** section and in the field for KEY enter **PORT**, in the VALUE field enter *8000* and then click **ADD**.
 
-- If your project uses a **creds.json** file you will need to set a config var by adding **CREDS** to KEY field and copying contents of creds.json file into VALUE field.
+- If your project uses a **creds.json** file you will need to set a config var by adding **CREDS** to KEY field and copying contents of creds.json file into **VALUE** field.
 
 - Go to Buildpacks section and click on **Add buildpack**.
 
