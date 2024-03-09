@@ -4,7 +4,7 @@
 
 ## Project Goals
 
-The goal of this project is to create a Python based interactive terminal game of hangman. The words will be randomly selected from an API and if API is not available, random backup words will be retrieved from the words.py file. All user inputs to be validated and feedback to the player if any invalid inputs are made.  
+The goal of this project is to create a Python based fun interactive terminal game of hangman for all ages. The words will be randomly selected from an API and if API is not available, random backup words will be retrieved from the words.py file. All user inputs to be validated and feedback to the player if any invalid inputs are made.  
 
 ## Table of Contents
 
